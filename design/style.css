@@ -1,0 +1,84 @@
+/* The World in One Day — Thursday 19 November 2026.
+   Newspaper page, 1024 x 1024. Mahoraga adaptation after the Depot 9 loss
+   and the two earlier news-image entries: a full-width HERO so the day's
+   biggest story is unmistakable at ~300px wide, a bigger hero headline
+   (36px), and a larger also-list (12.5px) so the breadth stays readable.
+   One clear composition, big type, no dense paragraphs. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1024px; height: 1024px; }
+body { background: #f8f4ea; color: #161513; font-family: 'Noto Serif', Georgia, 'Times New Roman', serif; }
+.page { width: 1024px; height: 1024px; background: #f8f4ea; overflow: hidden; }
+
+/* ---------- Masthead ---------- */
+.masthead { background: #0a1f38; color: #fff; padding: 8px 26px 8px;
+  border-top: 6px solid #b3271e; }
+.mast-top { display: flex; justify-content: space-between; align-items: baseline;
+  font-family: 'Noto Sans', Arial, sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: 3px; color: #e8b64c; text-transform: uppercase; }
+.mast-top .right { letter-spacing: 2px; font-size: 13px; }
+.mast-date { font-size: 54px; font-weight: 900; line-height: 1.02; letter-spacing: -0.5px; margin-top: 2px; }
+.mast-date em { font-style: normal; color: #e8b64c; }
+.mast-tag { font-size: 15px; font-style: italic; color: #cfe0ee; margin-top: 2px; }
+
+/* ---------- Body ---------- */
+.body { padding: 6px 24px 0; }
+.row { display: flex; gap: 18px; }
+.story { flex: 1; min-width: 0; }
+.story svg.art { display: block; width: 100%; }
+.kicker { font-family: 'Noto Sans', Arial, sans-serif; font-size: 11.5px; font-weight: 700;
+  letter-spacing: 1.6px; color: #b3271e; text-transform: uppercase; margin: 7px 0 3px; }
+.kicker .num { display: inline-block; background: #b3271e; color: #fff; border-radius: 50%;
+  width: 17px; height: 17px; line-height: 17px; text-align: center; font-size: 11px;
+  letter-spacing: 0; margin-right: 5px; }
+.headline { font-size: 26px; font-weight: 900; line-height: 1.08; letter-spacing: -0.2px; }
+.deck { font-size: 14px; line-height: 1.32; color: #3a382f; margin-top: 4px; }
+
+/* ---------- HERO: full-width Gaza ground operation ---------- */
+.hero { display: flex; gap: 18px; border-bottom: 3px solid #0a1f38; padding-bottom: 6px; }
+.hero svg.art { width: 560px; flex: none; height: 160px; display: block; }
+.hero .hero-text { flex: 1; min-width: 0; padding-top: 2px; }
+.hero .kicker { font-size: 12.5px; margin: 0 0 4px; }
+.hero .kicker .num { width: 20px; height: 20px; line-height: 20px; font-size: 12px; }
+.hero .headline { font-size: 36px; line-height: 1.05; }
+.hero .deck { font-size: 14.5px; line-height: 1.35; margin-top: 6px; }
+
+.row2 { margin-top: 7px; }
+.row2 .art { height: 80px; }
+.row2 .headline { font-size: 23px; }
+.row2 .deck { font-size: 13px; }
+.row3 { margin-top: 7px; }
+.row3 .art { height: 72px; }
+.row3 .headline { font-size: 21px; }
+.row3 .deck { font-size: 13px; line-height: 1.3; }
+
+/* ---------- By the numbers: inverted navy band ---------- */
+.numbers { display: flex; background: #0a1f38; margin-top: 7px; padding: 5px 0 6px;
+  border-top: 3px solid #b3271e; }
+.numbers .cell { flex: 1; text-align: center; padding: 0 10px; }
+.numbers .cell + .cell { border-left: 1px solid #3d5a7d; }
+.numbers .big { font-family: 'Noto Sans', Arial, sans-serif; font-size: 26px; font-weight: 900; color: #e8b64c; line-height: 1; }
+.numbers .lab { font-family: 'Noto Sans', Arial, sans-serif; font-size: 10.5px; line-height: 1.25; color: #d7e3ee; margin-top: 3px; white-space: nowrap; }
+.numbers .head { font-family: 'Noto Sans', Arial, sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; color: #e8b64c; text-transform: uppercase; writing-mode: vertical-rl;
+  transform: rotate(180deg); text-align: center; padding-right: 8px; }
+
+/* ---------- Bottom: map + also list ---------- */
+.bottom { display: flex; gap: 16px; margin-top: 5px; }
+.map { width: 280px; flex: none; }
+.map h3, .also h3 { font-family: 'Noto Sans', Arial, sans-serif; font-size: 13.5px; font-weight: 700;
+  letter-spacing: 1.6px; color: #0a1f38; text-transform: uppercase;
+  border-bottom: 2px solid #0a1f38; padding-bottom: 4px; margin-bottom: 6px; }
+.map svg { display: block; width: 280px; height: 128px; }
+.map .cap { font-size: 11.5px; font-style: italic; color: #55524a; margin-top: 4px; line-height: 1.3; }
+.also { flex: 1; min-width: 0; }
+.also .cols { display: flex; gap: 14px; }
+.also .col { flex: 1; min-width: 0; }
+.also ul { list-style: none; }
+.also li { font-family: 'Noto Sans', Arial, sans-serif; font-size: 12.5px; line-height: 1.22;
+  padding: 1.5px 0 1.5px 14px; position: relative; white-space: nowrap; overflow: hidden; }
+.also li::before { content: "\25AA"; position: absolute; left: 0; top: 2px; color: #b3271e; font-size: 12px; }
+.also li b { color: #161513; }
+
+/* ---------- Footer ---------- */
+.footer { margin: 3px 24px 0; padding-top: 3px; border-top: 1px solid #b9b2a2;
+  font-family: 'Noto Sans', Arial, sans-serif; font-size: 9.5px; line-height: 1.4; color: #55524a; }
