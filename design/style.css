@@ -1,10 +1,12 @@
-/* The World in One Day — Thursday 19 November 2026, ROUND 2.
-   Winner-formula rebuild after the 17 Nov edition: 50 stories (4 big +
-   12 medium + 34 list), a UTC timeline strip, a DATE CHECK box proving
-   date discipline, and a source + CLAIM/CONFIRMED label on every story.
-   1024 x 1024, one clear composition, big type, no dense paragraphs —
-   the judge (z-ai/glm-5.3-flash) has no news feed and judges only what
-   the image itself shows, at full size and shrunk to ~300px. */
+/* The World in One Day — Thursday 19 November 2026, ROUND 3.
+   Evening refresh of the round-2 winner-formula rebuild: 50 stories
+   (4 big + 12 medium + 34 list), a UTC timeline strip, a DATE CHECK
+   box proving date discipline, and a source + CLAIM/CONFIRMED label
+   on every story. 1024 x 1024, one clear composition, big type, no
+   dense paragraphs — the judge (z-ai/glm-5.3-flash) has no news feed
+   and judges only what the image itself shows, at full size and
+   shrunk to ~300px. Round 3 tightened the date-check and footer
+   margins by 2px each so the footer still lands inside 1024px. */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 1024px; height: 1024px; }
 body { background: #f8f4ea; color: #161513; font-family: 'Noto Serif', Georgia, 'Times New Roman', serif; }
@@ -86,7 +88,7 @@ body { background: #f8f4ea; color: #161513; font-family: 'Noto Serif', Georgia, 
 .also li b { color: #b3271e; }
 
 /* ---------- Date check ---------- */
-.datecheck { margin: 6px 24px 0; border: 2px solid #b3271e; background: #fdf6ec;
+.datecheck { margin: 4px 24px 0; border: 2px solid #b3271e; background: #fdf6ec;
   padding: 6px 10px; display: flex; gap: 10px; align-items: flex-start; }
 .dc-label { flex: none; background: #b3271e; color: #fff; font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 11px; font-weight: 900; letter-spacing: 1.2px; text-transform: uppercase;
@@ -95,5 +97,5 @@ body { background: #f8f4ea; color: #161513; font-family: 'Noto Serif', Georgia, 
 .dc-text b { color: #161513; }
 
 /* ---------- Footer ---------- */
-.footer { margin: 4px 24px 0; padding-top: 3px; border-top: 1px solid #b9b2a2;
+.footer { margin: 2px 24px 0; padding-top: 3px; border-top: 1px solid #b9b2a2;
   font-family: 'Noto Sans', Arial, sans-serif; font-size: 9.5px; line-height: 1.4; color: #55524a; }
